@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:text="FOOD FAST"
         android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="@color/green"
+        android:textColor="#008000"
         android:textStyle="bold"
         android:textSize="50dp"
         android:textAlignment="center"
@@ -27,8 +27,8 @@
         android:id="@+id/helpButton"
         android:layout_width="114dp"
         android:layout_height="166dp"
-        android:layout_marginTop="450dp"
-        android:background="null"
+        android:layout_marginTop="350dp"
+        android:background="@android:color/transparent"
         android:drawableTop="@drawable/help_foreground"
         android:src="@drawable/help_foreground"
         android:text="HELP"
@@ -37,12 +37,12 @@
     <Button
         android:id="@+id/showButton"
         android:layout_width="180dp"
-        android:background="null"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="350dp"
         android:drawableTop="@drawable/show_foreground"
+        android:background="@android:color/transparent"
         android:src="@drawable/show_foreground"
         android:text="SHOW NEAREST RESTAURANT" />
 
@@ -51,11 +51,22 @@
         android:layout_width="wrap_content"
         android:layout_height="167dp"
         android:layout_marginLeft="300dp"
-        android:layout_marginTop="450dp"
-        android:background="null"
+        android:layout_marginTop="350dp"
         android:drawableTop="@drawable/search_foreground"
+        android:background="@android:color/transparent"
         android:gravity="center"
         android:text="SEARCH"
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/ButtonShow"
+        android:layout_width="wrap_content"
+        android:layout_height="167dp"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="200dp"
+        android:drawableTop="@drawable/search_foreground"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="show"
         android:textColor="@color/black" />
 
 </RelativeLayout>
