@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
+    public static ShowActivity main;
     Button search, show;
 
     @Override
