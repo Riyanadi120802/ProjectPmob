@@ -20,6 +20,7 @@ import java.lang.reflect.Array;
 
 public class ShowActivity extends AppCompatActivity {
 
+    public static ShowActivity ma;
     String[] daftar;
     ListView ListView01;
     Menu menu;
@@ -34,7 +35,7 @@ public class ShowActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent inte = new Intent(ShowActivity.this, MainActivity.class);
+                Intent inte = new Intent(ShowActivity.this, Buat_data.class);
                 startActivity(inte);
             }
         });
@@ -70,7 +71,7 @@ public class ShowActivity extends AppCompatActivity {
                                 startActivity(i);
                                 break;
                             case 1:
-                                Intent in = new Intent(getApplicationContext(), LihatRestauran.class);
+                                Intent in = new Intent(getApplicationContext(), update_data.class);
                                 in.putExtra("nama", selection);
                                 startActivity(in);
                                 break;

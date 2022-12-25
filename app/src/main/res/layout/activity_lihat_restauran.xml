@@ -13,7 +13,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:textColor="@color/black"
-        android:textStyle="italic"
+        android:textStyle="bold"
         android:layout_marginRight="240dp"
         android:layout_marginTop="20dp"
         android:text="TextView" />
@@ -23,8 +23,8 @@
         android:layout_width="wrap_content"
         android:textColor="@color/black"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textViewliat1"
-        android:textStyle="italic"
+        android:layout_alignLeft="@+id/textViewliat1"
+        android:textStyle="bold"
         android:layout_below="@+id/textViewliat1"
         android:layout_marginTop="20dp"
         android:text="TextView" />
@@ -34,8 +34,8 @@
         android:layout_width="wrap_content"
         android:textColor="@color/black"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewliat2"
-        android:textStyle="italic"
+        android:layout_alignLeft="@+id/textViewliat1"
+        android:textStyle="bold"
         android:layout_below="@+id/textViewliat2"
         android:layout_marginTop="20dp"
         android:text="TextView" />
@@ -45,32 +45,11 @@
         android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewliat3"
+        android:layout_alignLeft="@+id/textViewliat1"
         android:layout_below="@+id/textViewliat3"
-        android:textStyle="italic"
+        android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:text="TextView" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/textViewliat5"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignRight="@+id/textViewliat4"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textStyle="italic"-->
-<!--        android:layout_below="@+id/textViewliat4"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:text="TextView" />-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/TextView05"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignBaseline="@+id/textViewliat5"-->
-<!--        android:layout_alignBottom="@+id/textViewliat5"-->
-<!--        android:layout_alignLeft="@+id/TextView03"-->
-<!--        android:text="Alamat\t\t\t\t:" />-->
 
     <TextView
         android:id="@+id/TextView03"
@@ -100,7 +79,7 @@
         android:layout_alignBaseline="@+id/textViewliat2"
         android:layout_alignBottom="@+id/textViewliat2"
         android:layout_alignLeft="@+id/TextView01"
-        android:text="Namat\t\t\:" />
+        android:text="Nama\t\t\t:" />
 
     <TextView
         android:id="@+id/TextView01"
@@ -114,11 +93,14 @@
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_alignLeft="@+id/TextView04"
         android:layout_below="@+id/TextView04"
         android:layout_marginTop="60dp"
+        android:layout_width="70dp"
+        android:background="#8B0000"
+        android:gravity="center"
+        android:textColor="@color/white"
         android:text="Back" />
 
 </RelativeLayout>
