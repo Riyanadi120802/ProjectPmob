@@ -16,7 +16,7 @@ public class update_data extends AppCompatActivity {
     protected Cursor cursor;
     DatabaseHelper dbHelper;
     Button ton1, ton2;
-    EditText text1, text2, text3, text4, text5;
+    EditText text1, text2, text3, text4;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -29,9 +29,10 @@ public class update_data extends AppCompatActivity {
         text2 = (EditText) findViewById(R.id.editTextup2);
         text3 = (EditText) findViewById(R.id.editTextup3);
         text4 = (EditText) findViewById(R.id.editTextup4);
-        text5 = (EditText) findViewById(R.id.editTextup5);
+        ton1 = (Button) findViewById(R.id.button1);
+        ton2 = (Button) findViewById(R.id.button2);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        cursor = db.rawQuery("SELECT * FROM biodata WHERE nama = '" +
+        cursor = db.rawQuery("SELECT * FROM restaurant WHERE nama = '" +
                 getIntent().getStringExtra("nama") + "'",null);
         cursor.moveToFirst();
         if (cursor.getCount()>0) {
@@ -40,24 +41,21 @@ public class update_data extends AppCompatActivity {
             text2.setText(cursor.getString(1).toString());
             text3.setText(cursor.getString(2).toString());
             text4.setText(cursor.getString(3).toString());
-            text5.setText(cursor.getString(4).toString());
         }
-
-        ton1 = (Button) findViewById(R.id.button1);
-        ton2 = (Button) findViewById(R.id.button2);
 
         ton1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View arg0) {
+            public void onClick(View view) {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("UPDATE biodata SET nama='"+
-                        text2.getText().toString() +"', tgl='" +
-                        text3.getText().toString()+"', jk='"+
-                        text4.getText().toString() +"', alamat='" +
-                        text5.getText().toString() + "'WHERE no='" +
+                db.execSQL("UPDATE restaurant SET nama='"+
+                        text2.getText().toString() +"', alamat='" +
+                        text3.getText().toString()+"', rating='"+
+                        text4.getText().toString() + "' WHERE id='" +
                         text1.getText().toString()+"'");
                 Toast.makeText(getApplicationContext(), "Data berhasil di update", Toast.LENGTH_LONG).show();
-                MainActivity.main.RefreshList();
+                if (ShowActivity.ma != null) {
+                    ShowActivity.ma.RefreshList();
+                }
                 finish();
             }
         });
