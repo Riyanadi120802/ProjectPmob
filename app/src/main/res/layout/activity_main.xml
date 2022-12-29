@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,66 +7,241 @@
     tools:context=".MainActivity"
     android:id="@+id/main">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background"/>
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="FOOD FAST"
-        android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="#008000"
-        android:textStyle="bold"
-        android:textSize="50dp"
-        android:textAlignment="center"
-        android:layout_marginTop="100dp" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/helpButton"
-        android:layout_width="114dp"
-        android:layout_height="166dp"
-        android:layout_marginTop="350dp"
-        android:background="@android:color/transparent"
-        android:drawableTop="@drawable/help_foreground"
-        android:src="@drawable/help_foreground"
-        android:text="HELP"
-        android:textColor="@color/black" />
+        <ImageView
 
-    <Button
-        android:id="@+id/showButton"
-        android:layout_width="180dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="350dp"
-        android:drawableTop="@drawable/show_foreground"
-        android:background="@android:color/transparent"
-        android:src="@drawable/show_foreground"
-        android:text="SHOW NEAREST RESTAURANT" />
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background" />
 
-    <Button
-        android:id="@+id/searchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="167dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="350dp"
-        android:drawableTop="@drawable/search_foreground"
-        android:background="@android:color/transparent"
-        android:gravity="center"
-        android:text="SEARCH"
-        android:textColor="@color/black" />
-    <Button
-        android:id="@+id/ButtonShow"
-        android:layout_width="wrap_content"
-        android:layout_height="167dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="200dp"
-        android:drawableTop="@drawable/search_foreground"
-        android:background="@android:color/transparent"
-        android:gravity="center"
-        android:text="show"
-        android:textColor="@color/black" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="220sp"
+            android:layout_marginTop="50sp">
 
-</RelativeLayout>
+            <ImageView
+                android:layout_width="190sp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="100sp"
+                android:layout_marginRight="100sp"
+                android:background="@drawable/logo"></ImageView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300sp"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--Tombol 1-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/search_button"
+                android:layout_width="150sp"
+                android:layout_height="180sp"
+                android:layout_margin="10sp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="70sp"
+                        android:layout_height="70sp"
+                        android:layout_marginTop="10sp"
+                        android:background="@drawable/cari"
+                        android:padding="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:text="Pencarian"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="100sp"
+                        android:layout_height="1px"
+                        android:layout_marginTop="5sp"
+                        android:background="@android:color/holo_green_light" />
+
+                    <TextView
+                        android:layout_width="120sp"
+                        android:layout_height="45sp"
+                        android:gravity="center"
+                        android:padding="5sp"
+                        android:text="Rumah makan terdekat"
+                        android:textColor="@android:color/darker_gray" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Tombol 2-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/show_button"
+                android:layout_width="150sp"
+                android:layout_height="180sp"
+                android:layout_margin="10sp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="118sp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="70sp"
+                        android:layout_height="70sp"
+                        android:layout_marginTop="10sp"
+                        android:background="@drawable/rmakan"
+                        android:padding="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:text="Rumah Makan"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="100sp"
+                        android:layout_height="1px"
+                        android:layout_marginTop="5sp"
+                        android:background="@android:color/holo_green_light" />
+
+                    <TextView
+                        android:layout_width="120sp"
+                        android:layout_height="45sp"
+                        android:gravity="center"
+                        android:padding="5sp"
+                        android:text="Daftar Rumah Makan"
+                        android:textColor="@android:color/darker_gray" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!--Bagian 2-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500sp"
+            android:clipToPadding="false"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--Tombol 3-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/tambah_button"
+                android:layout_width="150sp"
+                android:layout_height="180sp"
+                android:layout_margin="10sp"
+                android:clickable="true"
+                android:background="@color/teal_200"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="120sp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="70sp"
+                        android:layout_height="70sp"
+                        android:layout_marginTop="10sp"
+                        android:background="@drawable/tambah"
+                        android:padding="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:text="Tambah Data"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="100sp"
+                        android:layout_height="1px"
+                        android:layout_marginTop="5sp"
+                        android:background="@android:color/holo_green_light" />
+
+                    <TextView
+                        android:layout_width="120sp"
+                        android:layout_height="45sp"
+                        android:layout_marginTop="1sp"
+                        android:gravity="center"
+                        android:padding="5sp"
+                        android:text="Data Rumah Makan"
+                        android:textColor="@android:color/darker_gray" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--Tombol 4-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/help_button"
+                android:layout_width="150sp"
+                android:layout_height="180sp"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="10sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="10sp"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="118sp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#fff"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:layout_width="75sp"
+                        android:layout_height="70sp"
+                        android:layout_marginTop="10sp"
+                        android:background="@drawable/help"
+                        android:padding="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:text="Help"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="100sp"
+                        android:layout_height="1px"
+                        android:layout_marginTop="5sp"
+                        android:background="@android:color/holo_green_light" />
+
+                    <TextView
+                        android:layout_width="120sp"
+                        android:layout_height="40sp"
+                        android:gravity="center"
+                        android:padding="5sp"
+                        android:text="Bantuan"
+                        android:textColor="@android:color/darker_gray" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
