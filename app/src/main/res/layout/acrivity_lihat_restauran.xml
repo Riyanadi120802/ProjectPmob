@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LihatRestauran" >
+
+    <TextView
+        android:id="@+id/textViewliat1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginRight="240dp"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewliat2"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewliat1"
+        android:textStyle="bold"
+        android:layout_below="@+id/textViewliat1"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewliat3"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewliat1"
+        android:textStyle="bold"
+        android:layout_below="@+id/textViewliat2"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textViewliat4"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textViewliat1"
+        android:layout_below="@+id/textViewliat3"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/TextView03"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewliat4"
+        android:layout_alignBottom="@+id/textViewliat4"
+        android:layout_alignLeft="@+id/TextView04"
+        android:text="Rating\t\t:" />
+
+    <TextView
+        android:id="@+id/TextView04"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:layout_alignBaseline="@+id/textViewliat3"
+        android:layout_alignBottom="@+id/textViewliat3"
+        android:layout_alignLeft="@+id/TextView02"
+        android:text="Alamat\t\t:" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewliat2"
+        android:layout_alignBottom="@+id/textViewliat2"
+        android:layout_alignLeft="@+id/TextView01"
+        android:text="Nama\t\t\t:" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewliat2"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:text="ID \t\t\t\t\t:" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_height="35dp"
+        android:layout_alignLeft="@+id/TextView04"
+        android:layout_below="@+id/TextView04"
+        android:layout_marginTop="60dp"
+        android:layout_width="70dp"
+        android:background="#8B0000"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Back" />
+
+</RelativeLayout>
