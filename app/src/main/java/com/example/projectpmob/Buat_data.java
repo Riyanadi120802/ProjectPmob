@@ -2,6 +2,7 @@ package com.example.projectpmob;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -40,7 +41,9 @@ public class Buat_data extends AppCompatActivity {
                         text3.getText().toString() +"','" +
                         text4.getText() +"')" );
                 Toast.makeText(getApplicationContext(), "Data Berhasil Ditambahkan", Toast.LENGTH_LONG).show();
-                ShowActivity.ma.RefreshList();
+                if (ShowActivity.ma != null) {
+                    ShowActivity.ma.RefreshList();
+                }
                 finish();
             }
         });
@@ -48,6 +51,9 @@ public class Buat_data extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent inte = new Intent(Buat_data.this, ShowActivity.class);
+                startActivity(inte);
                 finish();
             }
         });

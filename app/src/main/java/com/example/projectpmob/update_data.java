@@ -32,15 +32,15 @@ public class update_data extends AppCompatActivity {
         ton1 = (Button) findViewById(R.id.button1);
         ton2 = (Button) findViewById(R.id.button2);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        cursor = db.rawQuery("SELECT * FROM rm WHERE nama = '" +
+        cursor = db.rawQuery("SELECT nama, rm, testimoni, rating FROM rm WHERE nama = '" +
                 getIntent().getStringExtra("nama") + "'",null);
         cursor.moveToFirst();
         if (cursor.getCount()>0) {
             cursor.moveToPosition(0);
-            text1.setText(cursor.getString(1).toString());
-            text2.setText(cursor.getString(2).toString());
-            text3.setText(cursor.getString(3).toString());
-            text4.setText(cursor.getString(4).toString());
+            text1.setText(cursor.getString(0).toString());
+            text2.setText(cursor.getString(1).toString());
+            text3.setText(cursor.getString(2).toString());
+            text4.setText(cursor.getString(3).toString());
         }
 
         ton1.setOnClickListener(new View.OnClickListener() {
@@ -51,8 +51,8 @@ public class update_data extends AppCompatActivity {
                         text1.getText().toString() +"', rm='" +
                         text2.getText().toString()+"', testimoni='"+
                         text3.getText().toString()+"', rating='"+
-                        text4.getText() + "' WHERE id=id'" +
-                        "'");
+                        text4.getText() + "' WHERE nama='"+
+                        text1.getText().toString()+"'");
                 Toast.makeText(getApplicationContext(), "Data berhasil di update", Toast.LENGTH_LONG).show();
                 if (ShowActivity.ma != null) {
                     ShowActivity.ma.RefreshList();
