@@ -31,20 +31,20 @@ public class ShowActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show);
-        Button btn = (Button) findViewById(R.id.button2);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent inte = new Intent(ShowActivity.this, Buat_data.class);
-                startActivity(inte);
-            }
-        });
+//        Button btn = (Button) findViewById(R.id.button2);
+//        btn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent inte = new Intent(ShowActivity.this, Buat_data.class);
+//                startActivity(inte);
+//            }
+//        });
         dbcenter = new DatabaseHelper(this);
         RefreshList();
     }
     public void RefreshList() {
         SQLiteDatabase db = dbcenter.getReadableDatabase();
-        cursor = db.rawQuery("SELECT * FROM restaurant", null);
+        cursor = db.rawQuery("SELECT * FROM rm", null);
         daftar = new String[cursor.getCount()];
         cursor.moveToFirst();
         for (int cc = 0; cc < cursor.getCount(); cc++) {
@@ -77,7 +77,7 @@ public class ShowActivity extends AppCompatActivity {
                                 break;
                             case 2:
                                 SQLiteDatabase db = dbcenter.getWritableDatabase();
-                                db.execSQL("DELETE FROM restaurant WHERE nama = '" + selection + "'");
+                                db.execSQL("DELETE FROM rm WHERE nama = '" + selection + "'");
                                 Toast.makeText(ShowActivity.this, "Data berhasil dihapus", Toast.LENGTH_SHORT).show();
                                 RefreshList();
                                 break;

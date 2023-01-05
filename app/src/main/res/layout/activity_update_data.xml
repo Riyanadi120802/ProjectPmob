@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:text="ID Restaurant" />
+        android:text="Nama Pelanggan" />
 
     <TextView
         android:id="@+id/textView2"
@@ -27,7 +27,7 @@
         android:layout_alignLeft="@+id/editTextup1"
         android:layout_below="@+id/editTextup1"
         android:layout_marginTop="10dp"
-        android:text="Nama" />
+        android:text="Rumah Makan" />
 
     <EditText
         android:id="@+id/editTextup2"
@@ -43,7 +43,7 @@
         android:layout_alignLeft="@+id/editTextup2"
         android:layout_below="@+id/editTextup2"
         android:layout_marginTop="10dp"
-        android:text="Alamat" />
+        android:text="Testimoni" />
 
     <EditText
         android:id="@+id/editTextup3"
@@ -56,18 +56,17 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editTextup3"
+        android:layout_alignLeft="@+id/editTextup2"
         android:layout_below="@+id/editTextup3"
         android:layout_marginTop="10dp"
-        android:text="Rating" />
+        android:text="Rating 1-10" />
 
     <EditText
         android:id="@+id/editTextup4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignLeft="@+id/textView3"
         android:layout_below="@+id/textView4" />
-
 
     <Button
         android:id="@+id/button1"

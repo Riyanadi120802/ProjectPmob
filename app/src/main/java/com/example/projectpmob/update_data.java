@@ -32,26 +32,27 @@ public class update_data extends AppCompatActivity {
         ton1 = (Button) findViewById(R.id.button1);
         ton2 = (Button) findViewById(R.id.button2);
         SQLiteDatabase db = dbHelper.getReadableDatabase();
-        cursor = db.rawQuery("SELECT * FROM restaurant WHERE nama = '" +
+        cursor = db.rawQuery("SELECT * FROM rm WHERE nama = '" +
                 getIntent().getStringExtra("nama") + "'",null);
         cursor.moveToFirst();
         if (cursor.getCount()>0) {
             cursor.moveToPosition(0);
-            text1.setText(cursor.getString(0).toString());
-            text2.setText(cursor.getString(1).toString());
-            text3.setText(cursor.getString(2).toString());
-            text4.setText(cursor.getString(3).toString());
+            text1.setText(cursor.getString(1).toString());
+            text2.setText(cursor.getString(2).toString());
+            text3.setText(cursor.getString(3).toString());
+            text4.setText(cursor.getString(4).toString());
         }
 
         ton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("UPDATE restaurant SET nama='"+
-                        text2.getText().toString() +"', alamat='" +
+                db.execSQL("UPDATE rm SET nama='"+
+                        text1.getText().toString() +"', rm='" +
+                        text2.getText().toString()+"', testimoni='"+
                         text3.getText().toString()+"', rating='"+
-                        text4.getText().toString() + "' WHERE id='" +
-                        text1.getText().toString()+"'");
+                        text4.getText() + "' WHERE id=id'" +
+                        "'");
                 Toast.makeText(getApplicationContext(), "Data berhasil di update", Toast.LENGTH_LONG).show();
                 if (ShowActivity.ma != null) {
                     ShowActivity.ma.RefreshList();

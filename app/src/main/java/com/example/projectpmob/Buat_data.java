@@ -15,7 +15,7 @@ public class Buat_data extends AppCompatActivity {
     protected Cursor cursor;
     DatabaseHelper dbHelper;
     Button btn1, btn2;
-    EditText text1, text2, text3, text4;
+    EditText text1, text2, text3,text4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +34,12 @@ public class Buat_data extends AppCompatActivity {
             public void onClick(View view) {
                 // TODO Auto-generated method stub
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("INSERT INTO restaurant(id, nama, alamat, rating) VALUES ('" +
+                db.execSQL("INSERT INTO rm(nama, rm, testimoni, rating) VALUES ('" +
                         text1.getText().toString() +"','" +
                         text2.getText().toString() +"','" +
                         text3.getText().toString() +"','" +
-                        text4.getText().toString() +"')" );
-                Toast.makeText(getApplicationContext(), "Berhasil", Toast.LENGTH_LONG).show();
+                        text4.getText() +"')" );
+                Toast.makeText(getApplicationContext(), "Data Berhasil Ditambahkan", Toast.LENGTH_LONG).show();
                 ShowActivity.ma.RefreshList();
                 finish();
             }

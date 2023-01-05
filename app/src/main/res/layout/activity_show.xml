@@ -8,19 +8,34 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:text=" Buat Data Baru" />
+        android:text="Daftar Nama Restaurant"
+        android:textStyle="bold"
+        android:id="@+id/judul"
+        android:textSize="20sp"
+        android:gravity="center"></TextView>
 
     <ListView
         android:id="@+id/listView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/judul"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"></ListView>
+
+<!--    <Button-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Buat Testimoni baru"-->
+<!--        android:layout_below="@+id/judul"-->
+<!--        android:width="200sp"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="20sp"-->
+<!--        android:layout_marginBottom="10sp"-->
+<!--        android:background="@android:color/holo_green_dark"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:id="@+id/button2"></Button>-->
 
 </RelativeLayout>
