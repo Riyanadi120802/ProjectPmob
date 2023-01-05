@@ -1,11 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".Buat_data">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Bantuan"/>
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="590dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="150dp"
+        android:background="#FF0000"
+        android:text="Back"
+        android:textColor="@color/white" />
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="100sp">
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="0sp"
+            android:layout_marginRight="10sp"
+            android:background="@drawable/cari" />
+
+        <TextView
+            android:layout_width="270sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center"
+            android:text="Pencarian"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350sp"
+        android:layout_height="70sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="160sp">
+
+        <TextView
+            android:layout_width="350sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:text="Untuk mencari rumah makan terdekat dapat dilakukan dengan memilih menu Pencarian kemudian pilih lokasi terdekat."
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="240sp">
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="0sp"
+            android:layout_marginRight="10sp"
+            android:background="@drawable/rmakan" />
+
+        <TextView
+            android:layout_width="270sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center"
+            android:text="Rumah Makan"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350sp"
+        android:layout_height="70sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="300sp">
+
+        <TextView
+            android:layout_width="350sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:text="Pada bagian menu rumah makan ini kalian bisa melihat daftar rumah makan yang telah tersedia pada lokasi maps di menu pencarian."
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="300sp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="380sp">
+
+        <ImageView
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_marginLeft="0sp"
+            android:layout_marginRight="10sp"
+            android:background="@drawable/tambah" />
+
+        <TextView
+            android:layout_width="270sp"
+            android:layout_height="20sp"
+            android:layout_gravity="center"
+            android:text="Tambah Data"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350sp"
+        android:layout_height="70sp"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="440sp">
+
+        <TextView
+            android:layout_width="350sp"
+            android:layout_height="70sp"
+            android:layout_gravity="center"
+            android:text="Dalam pemakaian menu tambah data, bagi admin dapat dilakukan dengan memilih menu tambah data kemudian isikan keterangan mengenai rumah makan yang ingin ditambahkan."
+            android:textColor="@color/black" />
+    </LinearLayout>
+</RelativeLayout>
